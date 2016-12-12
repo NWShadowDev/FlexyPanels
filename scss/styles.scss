@@ -17,7 +17,7 @@
   // display: block;
   align-items: stretch;
   & * {
-    border: 1px solid black;
+    border: 2px solid black;
     width: 10em;
     height: 10em;
   }
@@ -37,8 +37,22 @@
     background: #FA8072;
   }
   @media screen and (max-width: 425px) {
-    width: 20em;
     margin: auto auto 5px;
     flex-direction: column;
+    width: 100%;
+  }
+  @media screen and (max-width: 527px) {
+    width:100%;
+    margin-bottom: 10px;
+    &:nth-child(2),&:nth-child(3),&:nth-child(4),&:nth-child(5),&:nth-child(8),&:nth-child(9) {
+      width: 48.2%;
+      flex-direction: row;
+    }
+    &:nth-child(2), &:nth-child(4),&:nth-child(8) {
+      margin-right: 5px;
+    }
+    &:nth-child(3), &:nth-child(5),&:nth-child(9) {
+      margin-left: 5px;
+    }
   }
 }
